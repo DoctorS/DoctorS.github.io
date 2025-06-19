@@ -1,23 +1,15 @@
-<!-- webapp.html -->
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <title>Demo Telegram Mini App</title>
+  <meta charset="UTF-8" />
+  <title>Telegram Mini App</title>
 </head>
 <body>
   <h1>Привет из Telegram Mini App!</h1>
   <p id="user"></p>
-  <button onclick="Telegram.WebApp.close()">Закрыть приложение</button>
+  <button id="closeBtn">Закрыть приложение</button>
 
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script>
-    Telegram.WebApp.ready();
-
-    const user = Telegram.WebApp.initDataUnsafe.user;
-    if (user) {
-      document.getElementById('user').textContent = `Привет, ${user.first_name}!`;
-    }
-  </script>
+  <script src="./webapp.js"></script>
 </body>
 </html>
